@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#13141f"/>
+      <stop offset="100%" stop-color="#0b0c16"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#dc6011"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#f97316" flood-opacity="0.4"/>
+    </filter>
+    <clipPath id="round">
+      <rect width="512" height="512" rx="112" ry="112"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <g clip-path="url(#round)" opacity="0.05" stroke="#f97316" stroke-width="1" fill="none">
+    <line x1="0" y1="128" x2="512" y2="128"/>
+    <line x1="0" y1="256" x2="512" y2="256"/>
+    <line x1="0" y1="384" x2="512" y2="384"/>
+    <line x1="128" y1="0" x2="128" y2="512"/>
+    <line x1="256" y1="0" x2="256" y2="512"/>
+    <line x1="384" y1="0" x2="384" y2="512"/>
+  </g>
+
+  <!-- Orange glow bloom -->
+  <ellipse cx="256" cy="260" rx="130" ry="120" fill="#f97316" opacity="0.07"/>
+
+  <!-- Letter F with filter shadow -->
+  <g filter="url(#shadow)">
+    <!-- Vertical stem -->
+    <rect x="152" y="130" width="60" height="252" rx="10" fill="url(#accent)"/>
+    <!-- Top bar -->
+    <rect x="152" y="130" width="220" height="58" rx="10" fill="url(#accent)"/>
+    <!-- Middle bar -->
+    <rect x="152" y="215" width="175" height="52" rx="10" fill="url(#accent)"/>
+  </g>
+
+  <!-- Dot accent (study timer nod) -->
+  <circle cx="382" cy="358" r="22" fill="url(#glow)" opacity="0.9"/>
+</svg>
